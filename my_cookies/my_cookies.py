@@ -12,30 +12,35 @@ def main():
     except Exception:
         print("get cookie from Chrome failed", file=sys.stderr)
 
+    # gain cookie from Chromium
     if not cookiejar:
         try:
             cookiejar = browser_cookie3.chromium(domain_name=leetcode_com)
         except Exception:
             print("get cookie from Chromium failed", file=sys.stderr)
 
+    # gain cookie from Brave
     if not cookiejar:
         try:
             cookiejar = browser_cookie3.brave(domain_name=leetcode_com)
         except Exception:
             print("get cookie from Brave failed", file=sys.stderr)
 
+    # gain cookie from Firefox
     if not cookiejar:
         try:
             cookiejar = browser_cookie3.firefox(domain_name=leetcode_com)
         except Exception:
             print("get cookie from Firefox failed", file=sys.stderr)
 
+    # gain cookie from Safari
     if not cookiejar:
         try:
             cookiejar = browser_cookie3.safari(domain_name=leetcode_com)
         except Exception:
             print("get cookie from Safari failed", file=sys.stderr)
 
+    # gain cookie from Microsoft Edge
     if not cookiejar:
         try:
             cookiejar = browser_cookie3.edge(domain_name=leetcode_com)
